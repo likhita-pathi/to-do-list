@@ -12,6 +12,10 @@ function ToDoList() {
       setNewTask("");
     }
   }
+  function deleteTask(index) {
+    const updatedTasks = tasks.filter((_, i) => i !== index);
+    setTasks(updatedTasks);
+  }
   return (
     <div className="to-do-list">
       <h1>To-Do-List</h1>
